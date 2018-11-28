@@ -29,9 +29,9 @@
       <find>build</find>
     </findStrings>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="171" />
-    <option name="y" value="27" />
+    <option name="y" value="117" />
     <option name="width" value="1400" />
     <option name="height" value="948" />
   </component>
@@ -74,7 +74,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="171" y="27" width="1400" height="948" extended-state="1" />
+    <frame x="171" y="117" width="1400" height="948" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24981844" />
