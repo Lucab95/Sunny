@@ -1,0 +1,20 @@
+python3 validation/validate_cli.py --result_fn data/sunny/fkvar/Magnus.json --test_as data/oasc_test_data/Magnus/ --train_as data/oasc_scenarios/train/Magnus
+
+
+python3 validation/validate_cli.py --result_fn data/sunny/fkvar/Caren.json --test_as data/oasc_test_data/Caren/ --train_as data/oasc_scenarios/train/Caren
+
+
+python3 validation/validate_cli.py --result_fn data/sunny/fkvar/Monty.json --test_as data/oasc_test_data/Monty/ --train_as data/oasc_scenarios/train/Monty
+
+
+python3 validation/validate_cli.py --result_fn data/sunny/fkvar/Bado.json --test_as data/oasc_test_data/Bado/ --train_as data/oasc_scenarios/train/Bado
+
+
+python3 validation/validate_cli.py --result_fn data/sunny/fkvar/Mira.json --test_as data/oasc_test_data/Mira/ --train_as data/oasc_scenarios/train/Mira
+
+python3 validation/validate_cli.py --result_fn data/sunny/fkvar/Svea.json --test_as data/oasc_test_data/Svea/ --train_as data/oasc_scenarios/train/Svea
+
+python3 validation/validate_cli.py --result_fn data/sunny/fkvar/Sora.json --test_as data/oasc_test_data/Sora/ --train_as data/oasc_scenarios/train/Sora
+
+
+python3 validation/validate_cli.py --result_fn data/sunny/fkvar/Quill.json --test_as data/oasc_test_data/Quill/ --train_as data/oasc_scenarios/train/Quill

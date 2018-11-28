@@ -1,0 +1,44 @@
+@RELATION Caren
+
+@ATTRIBUTE instance_id STRING
+@ATTRIBUTE repetition NUMERIC
+@ATTRIBUTE step_1 NUMERIC
+
+@DATA
+instance_2,1.0,0.068
+instance_9,1.0,0.216
+instance_10,1.0,0.2
+instance_11,1.0,0.728
+instance_16,1.0,0.1
+instance_22,1.0,0.268
+instance_27,1.0,0.148
+instance_31,1.0,0.048
+instance_33,1.0,0.064
+instance_34,1.0,0.06
+instance_38,1.0,0.104
+instance_42,1.0,0.16
+instance_43,1.0,0.148
+instance_46,1.0,0.0
+instance_48,1.0,0.0
+instance_49,1.0,0.0
+instance_50,1.0,0.0
+instance_51,1.0,0.192
+instance_56,1.0,0.072
+instance_57,1.0,0.088
+instance_60,1.0,0.068
+instance_64,1.0,0.088
+instance_66,1.0,0.148
+instance_71,1.0,0.24
+instance_73,1.0,0.468
+instance_74,1.0,0.152
+instance_77,1.0,0.056
+instance_79,1.0,0.072
+instance_81,1.0,2.064
+instance_84,1.0,4.992
+instance_88,1.0,1.86
+instance_92,1.0,0.58
+instance_93,1.0,0.124
+instance_97,1.0,0.544
+% 
+% 
+% 

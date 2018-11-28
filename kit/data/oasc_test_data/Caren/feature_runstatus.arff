@@ -1,0 +1,44 @@
+@RELATION Caren
+
+@ATTRIBUTE instance_id STRING
+@ATTRIBUTE repetition NUMERIC
+@ATTRIBUTE step_1 {ok, timeout, memout, presolved, crash, unknown, other}
+
+@DATA
+instance_2,1.0,ok
+instance_9,1.0,ok
+instance_10,1.0,ok
+instance_11,1.0,ok
+instance_16,1.0,ok
+instance_22,1.0,ok
+instance_27,1.0,ok
+instance_31,1.0,ok
+instance_33,1.0,ok
+instance_34,1.0,ok
+instance_38,1.0,ok
+instance_42,1.0,ok
+instance_43,1.0,ok
+instance_46,1.0,crash
+instance_48,1.0,crash
+instance_49,1.0,crash
+instance_50,1.0,crash
+instance_51,1.0,ok
+instance_56,1.0,ok
+instance_57,1.0,ok
+instance_60,1.0,ok
+instance_64,1.0,ok
+instance_66,1.0,ok
+instance_71,1.0,ok
+instance_73,1.0,ok
+instance_74,1.0,ok
+instance_77,1.0,ok
+instance_79,1.0,ok
+instance_81,1.0,ok
+instance_84,1.0,ok
+instance_88,1.0,ok
+instance_92,1.0,ok
+instance_93,1.0,ok
+instance_97,1.0,ok
+% 
+% 
+% 
