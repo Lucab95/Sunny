@@ -19,6 +19,7 @@ import json
 import random
 import datetime
 import time
+import random
 from shutil import copyfile
 # import sys
 root_arr = os.path.realpath(__file__).split('/')[:-2]
@@ -36,7 +37,6 @@ from analyze_scenario import analyze_scenario_stats,getRunTime
 
 
 def learn_scenario_fold(param_learn,param_learn_fold,context,fist_n_ks):
-  
   scenario_path,scenario_cv,scenario_outcome_dir,tdir,src_path,kRange,lim_nfeat,shouldWrappeFeature= parse_param_learn(param_learn)
   sub_scenario_path,log_file_hard,log_file_small,outcome_file,features = parse_param_learn_fold(param_learn_fold)
   
@@ -51,19 +51,18 @@ def learn_scenario_fold(param_learn,param_learn_fold,context,fist_n_ks):
     new_gain = float('inf')
     tmp_par10 = None
     print len(features), 'feature space size'
-    for feat in features:
-      
+    randoFeats = random.sample(features,40)
+    #print len(randoFeat), 'length random list'
+    for feat in randoFeats: #cicla 40 features
       feat_str = feat
-
       testFeatures = feat_str if best_feats == '' else best_feats+','+feat_str
-
       # check saved states (if computed yet)
       if "feats="+testFeatures+";" in open(log_file_small).read():
-        print "feats=",testFeatures,"; already computed" 
+        print "feats=",testFeatures,"; already computed"
         token = "feats="+testFeatures+";"
         par10,value_k = read_state_file(log_file_small,token)
       else:
-  
+
         # start main
         start_time_feat = time.time()
 
@@ -80,7 +79,7 @@ def learn_scenario_fold(param_learn,param_learn_fold,context,fist_n_ks):
         new_best_k = value_k
         new_sel_feat = feat_str
         best_par10 = tmp_par10
-    # end for feat in features
+  # end for feat in features
 
     if new_gain > gain:
       print new_gain,'>', gain,' so break, final par10',gain
@@ -101,46 +100,49 @@ def learn_scenario_fold(param_learn,param_learn_fold,context,fist_n_ks):
     if number_of_sel_feats == lim_nfeat:
       print lim_nfeat,'features reached, so break, final par10:',gain
       break
-  
+  #end while
   # in case resumed from previous state, recompute best value
   if not best_par10:
     best_par10,value_k,par10s = learn_optima_k(src_path,sub_scenario_path,kRange,best_feats,log_file_hard,context)
     # print value_k,best_k,' these two values should be the same ...'
-    
-  # end while
+
   return best_feats,best_k,best_par10
 
 def learn_optima_k(src_path,sub_scenario_path,kRange,testFeatures,log_file_hard,context):
   low_par10 = 999999
   best_k = -1
 
+  #print("/t", kRange) #krange va da 3 a 29
   par10s = []
-  for value_k in kRange:
+  randoK=random.sample(kRange,1)
+  #print("selected k",randoK)
+  for value_k in randoK:
+    #value_k= random.choice(kRange)#con ripetizione
     start_time_k = time.time()
 
     params = {'k':value_k,'feat':testFeatures}
 
+
     token = "k="+str(value_k)+";feats="+testFeatures+";"
     if token in open(log_file_hard).read():
-
-      #print token,"already computed" 
+      #print token,"already computed"
       par10,value_k = read_state_file(log_file_hard,token)
 
     else:
-
-      # print params
+      #print params
       par10 = run_evaluator(src_path,sub_scenario_path,params,context)
 
-      ex_time_k = time.strftime("%H:%M:%S", time.gmtime(time.time()-start_time_k)) 
+      ex_time_k = time.strftime("%H:%M:%S", time.gmtime(time.time()-start_time_k))
       date_now = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
       log_str = 'k='+str(value_k)+";feats="+testFeatures+";par10="+str(par10)+';runetime='+ex_time_k+';'+str(date_now)+"\n"
       appendToFile(log_file_hard,log_str)
-    
+   # print("par 10 \n" , par10)
     par10s.append(par10)
     if low_par10 > par10:
       low_par10 = par10
       best_k = value_k
 
+ #for p in par10s: print ("elem di par10s unordered",p)
   par10s.sort()
   return low_par10,best_k,par10s
 
@@ -380,12 +382,14 @@ def prepare_scenario(scenario_name,tdir,number_insts):
   if not os.path.exists(scenario_path):
     print 'Scenario Name Err on',scenario_path
     sys.exit()
-
+  # crea cartella t
   if not os.path.exists(scenario_t):
     print 'Creating folder t'
     copyTrainFiles(scenario_path,tdir) 
 
   # split train
+
+  #comincia il train che in teoria andrebbe tolto poi
   print 'Check and Split Training Data ...'
 
   smart_conf = scenario_path+"/smart.txt"
@@ -418,7 +422,7 @@ def prepare_scenario(scenario_name,tdir,number_insts):
 
   return scenario_path,scenario_cv,src_path
 
-# ==========================
+# ========================== end prepare_scenario
 # Splitting Scenarios
 # ==========================
 
@@ -679,6 +683,7 @@ def make_ground_kbs(scenario_path):
       runtime_dic[test_path] =  runtimes
 
   return runtime_dic
+
 
 def informative_feat(path):
   ''' 
