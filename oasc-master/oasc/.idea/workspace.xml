@@ -3,17 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="d9da7298-cf77-4654-8a71-c7f50094ab5d" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/oasc.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bit.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run_fkvarbit.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rand.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run_fkvarRand.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kit.py" beforeDir="false" afterPath="$PROJECT_DIR$/kit.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run_fkvar.py" beforeDir="false" afterPath="$PROJECT_DIR$/run_fkvar.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bit.py" beforeDir="false" afterPath="$PROJECT_DIR$/bit.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,31 +18,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bit.py">
+        <entry file="file://$PROJECT_DIR$/run_fkvarRand.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="576">
-              <caret line="69" column="48" selection-start-line="69" selection-start-column="48" selection-end-line="69" selection-end-column="48" />
-              <folding>
-                <element signature="e#122#131#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/run_fkvarbit.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/run_fkvar.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1020">
-              <caret line="68" column="46" selection-start-line="68" selection-start-column="46" selection-end-line="68" selection-end-column="46" />
+            <state relative-caret-position="405">
+              <caret line="75" column="47" selection-start-line="75" selection-start-column="47" selection-end-line="75" selection-end-column="47" />
               <folding>
                 <element signature="e#142#151#0" expanded="true" />
               </folding>
@@ -56,11 +29,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/run_autok.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/rand.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="34" column="46" selection-start-line="34" selection-start-column="46" selection-end-line="34" selection-end-column="46" />
+            <state relative-caret-position="649">
+              <caret line="78" column="27" lean-forward="true" selection-start-line="78" selection-start-column="27" selection-end-line="78" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -69,22 +42,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>feat</find>
-      <find>learnK_with_all_feats</find>
-      <find>prepare_scenario</find>
-      <find>prepare</find>
-      <find>init</find>
-      <find>initFiles</find>
-      <find>informative_feat</find>
-      <find>log_hard</find>
-      <find>features</find>
-      <find>param_learn</find>
-      <find>learn_op</find>
-      <find>build</find>
-      <find>context</find>
-      <find>learn_sce</find>
-      <find>best_fe</find>
-      <find>ecco</find>
       <find>ecco le</find>
       <find>best</find>
       <find>Building</find>
@@ -92,13 +49,29 @@
       <find>print</find>
       <find>Step</find>
       <find>feature</find>
-      <find>fist_n_ks</find>
       <find>parse_</find>
       <find>parse_para</find>
       <find>so</find>
       <find>/t</find>
-      <find>gain</find>
       <find>learn_opt</find>
+      <find>run_eva</find>
+      <find>sub_scenario_path</find>
+      <find>context</find>
+      <find>gain</find>
+      <find>choice</find>
+      <find>learn_scenario_fold</find>
+      <find>learn_op</find>
+      <find>learn_optima_k</find>
+      <find>steP</find>
+      <find>value_k</find>
+      <find>fist_n_ks</find>
+      <find>learn_scenario_fo</find>
+      <find>param_learn</find>
+      <find>kRange</find>
+      <find>t</find>
+      <find>test</find>
+      <find>\n</find>
+      <find>learnk</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -110,14 +83,16 @@
         <option value="$PROJECT_DIR$/run_fkvar.py" />
         <option value="$PROJECT_DIR$/run_fkvarbit.py" />
         <option value="$PROJECT_DIR$/bit.py" />
+        <option value="$PROJECT_DIR$/run_fkvarRand.py" />
+        <option value="$PROJECT_DIR$/rand.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="4">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="67" />
-    <option name="y" value="25" />
+    <option name="y" value="27" />
     <option name="width" value="1151" />
-    <option name="height" value="950" />
+    <option name="height" value="948" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -205,14 +180,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="25" width="1151" height="950" extended-state="4" />
+    <frame x="67" y="25" width="1853" height="950" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18351063" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.112568304" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32886723" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32967034" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3992674" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -228,17 +203,27 @@
     </layout>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/kit.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="23" column="53" lean-forward="true" selection-start-line="23" selection-start-column="53" selection-end-line="23" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" column="35" selection-start-line="1" selection-start-column="35" selection-end-line="1" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bit.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="55" column="5" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
+          <folding>
+            <element signature="e#122#131#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kit.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
         </state>
       </provider>
     </entry>
@@ -249,30 +234,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/run_fkvarbit.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bit.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="69" column="48" selection-start-line="69" selection-start-column="48" selection-end-line="69" selection-end-column="48" />
-          <folding>
-            <element signature="e#122#131#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/run_fkvar.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1020">
+        <state relative-caret-position="844">
           <caret line="68" column="46" selection-start-line="68" selection-start-column="46" selection-end-line="68" selection-end-column="46" />
           <folding>
             <element signature="e#142#151#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/run_fkvarbit.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1650">
+          <caret line="114" lean-forward="true" selection-start-line="114" selection-end-line="114" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/run_fkvarRand.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="75" column="47" selection-start-line="75" selection-start-column="47" selection-end-line="75" selection-end-column="47" />
+          <folding>
+            <element signature="e#142#151#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rand.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="649">
+          <caret line="78" column="27" lean-forward="true" selection-start-line="78" selection-start-column="27" selection-end-line="78" selection-end-column="27" />
         </state>
       </provider>
     </entry>

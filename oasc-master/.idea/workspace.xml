@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="324acdaf-2cd8-4b9a-b5e6-81ab80ac2725" name="Default Changelist" comment="" />
+    <list default="true" id="324acdaf-2cd8-4b9a-b5e6-81ab80ac2725" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oasc/kit.py" beforeDir="false" afterPath="$PROJECT_DIR$/oasc/kit.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oasc/run_fkvar.py" beforeDir="false" afterPath="$PROJECT_DIR$/oasc/run_fkvar.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -10,11 +14,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/oasc/kit.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/oasc/bit.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2725">
-              <caret line="601" column="14" lean-forward="true" selection-start-line="601" selection-start-column="14" selection-end-line="601" selection-end-column="14" />
+            <state relative-caret-position="480">
+              <caret line="39" column="69" selection-start-line="39" selection-start-column="63" selection-end-line="39" selection-end-column="69" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/oasc/run_fkvar.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="465">
+              <caret line="119" column="13" selection-start-line="119" selection-start-column="13" selection-end-line="119" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -27,25 +40,58 @@
       <find>check and</find>
       <find>Building</find>
       <find>build</find>
+      <find>Check and</find>
+      <find>K</find>
+      <find>token</find>
+      <find>alread</find>
+      <find>already</find>
+      <find>krange</find>
     </findStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/oasc/bit.py" />
+        <option value="$PROJECT_DIR$/oasc/run_fkvar.py" />
+      </list>
+    </option>
+  </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="171" />
-    <option name="y" value="117" />
+    <option name="x" value="181" />
+    <option name="y" value="27" />
     <option name="width" value="1400" />
     <option name="height" value="948" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="oasc-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="oasc-master" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="oasc-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="oasc-master" type="462c0819:PsiDirectoryNode" />
+              <item name="oasc" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="Scope" />
-      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../simanneal" />
     <property name="settings.editor.selected.configurable" value="preferences.general" />
   </component>
   <component name="RunDashboard">
@@ -74,8 +120,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="171" y="117" width="1400" height="948" extended-state="0" />
-    <editor active="true" />
+    <frame x="181" y="27" width="1400" height="948" extended-state="0" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24981844" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -99,8 +144,22 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/oasc/kit.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2725">
-          <caret line="601" column="14" lean-forward="true" selection-start-line="601" selection-start-column="14" selection-end-line="601" selection-end-column="14" />
+        <state relative-caret-position="737">
+          <caret line="388" column="9" selection-start-line="388" selection-start-column="9" selection-end-line="388" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/oasc/bit.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="39" column="69" selection-start-line="39" selection-start-column="63" selection-end-line="39" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/oasc/run_fkvar.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="119" column="13" selection-start-line="119" selection-start-column="13" selection-end-line="119" selection-end-column="13" />
         </state>
       </provider>
     </entry>

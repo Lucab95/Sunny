@@ -20,6 +20,8 @@ import random
 import datetime
 import time
 import random
+
+
 from shutil import copyfile
 # import sys
 root_arr = os.path.realpath(__file__).split('/')[:-2]
@@ -42,75 +44,69 @@ def learn_scenario_fold(param_learn,param_learn_fold,context,fist_n_ks):
   
   start_time_fold = time.time()
   # iteration for best configurators
+  computation=0
   gain = best_k = new_gain = best_par10 = float('inf')
   best_feats = ''
   
-  while True:
-    new_sel_feat = ''
-    new_best_k = -1
-    new_gain = float('inf')
-    tmp_par10 = None
-    print len(features), 'feature space size'
-    randoFeats = random.sample(features,40)
-    #print len(randoFeats), 'length random list'
-    #for feat in randoFeats: #cicla 40 features)
-      feat=random.choice(features)
-      feat_str = feat
-      testFeatures = feat_str if best_feats == '' else best_feats+','+feat_str
-      # check saved states (if computed yet)
-      if "feats="+testFeatures+";" in open(log_file_small).read():
-        print "feats=",testFeatures,"; already computed"
-        token = "feats="+testFeatures+";"
-        par10,value_k = read_state_file(log_file_small,token)
-      else:
+  for i in range(1000):
+    elements = random.randint(3,15)
+    randoFeats = ','.join(random.sample(features,elements))
+    #print("this join",randoFeats)
+    # check saved states (if computed yet)
+    if "feats="+randoFeats+";" in open(log_file_small).read():
+      print "feats=",randoFeats,"; already computed"
+      token = "feats="+randoFeats+";"
+      par10,value_k = read_state_file(log_file_small,token)
+    else:
 
-        # start main
-        start_time_feat = time.time()
+      # start main
+      start_time_feat = time.time()
 
-        # MAIN
-        #tmp_par10,value_k,par10s = learn_optima_k(src_path,sub_scenario_path,kRange,testFeatures,log_file_hard,context)
-        #par10 = sum(par10s[:fist_n_ks]) # top 3 par10 as final score
-        value_k = random.choice(kRange)
-        params = {'k': value_k , 'feat': testFeatures}
-        par10 = run_evaluator(src_path,sub_scenario_path,params,context)
+      # MAIN
+      value_k = random.choice(kRange)
+      params = {'k': value_k , 'feat': randoFeats}
+      par10 = run_evaluator(src_path,sub_scenario_path,params,context)
 
-        print par10,value_k,testFeatures
-        # save state
-        log_small(log_file_small,start_time_feat,testFeatures,value_k,par10)
+      print ("num feature, feature", elements, randoFeats)
+      print("computation, value_k, par10" ,i, value_k, par10)
 
-      if par10 < new_gain:
-        new_gain = par10
-        new_best_k = value_k
-        new_sel_feat = feat_str
-        best_par10 = tmp_par10
-  # end for feat in features
 
-    if new_gain > gain:
-      print new_gain,'>', gain,' so break, final par10',gain
-      break
+      # save state
+      log_small(log_file_small,start_time_feat,randoFeats,value_k,par10)
+
+    #if par10 < new_gain:#modificare controllo e inserire un salvataggio risultati
+     # new_gain = par10
+      #new_best_k = value_k
+      #new_sel_feat = randoFeats
+      #best_par10 = tmp_par10
+
+    #if new_gain > gain:
+     # print new_gain,'>', gain,' so break, final par10',gain
+      #break
 
     # pos process
-    gain = new_gain
-    best_k = new_best_k
-    best_feats = new_sel_feat if best_feats == '' else best_feats+','+new_sel_feat
-    features = [i for i in features if str(i) != str(new_sel_feat)] # remove selected feature from feature set
+    if par10 < best_par10:
+      best_par10 = par10
+      best_k = value_k
+      best_feats = randoFeats
+      computation=i
 
     # debug log
-    log_small_subtotal(log_file_small,best_feats,best_k,gain)
+    log_small_subtotal(log_file_small,best_feats,best_k,best_par10)
 
-    number_of_sel_feats = len(best_feats.split(','))
+    #number_of_sel_feats = len(best_feats.split(','))
 
     # uncomment here for limited features
-    if number_of_sel_feats == lim_nfeat:
-      print lim_nfeat,'features reached, so break, final par10:',gain
-      break
-  #end while
+    #if number_of_sel_feats == lim_nfeat:
+     # print lim_nfeat,'features reached, so break, final par10:',gain
+      #break
+  #end for
   # in case resumed from previous state, recompute best value
-  if not best_par10:
-    best_par10,value_k,par10s = learn_optima_k(src_path,sub_scenario_path,kRange,best_feats,log_file_hard,context)
+  #if not best_par10:
+   # best_par10,value_k,par10s = learn_optima_k(src_path,sub_scenario_path,kRange,best_feats,log_file_hard,context)
     # print value_k,best_k,' these two values should be the same ...'
 
-  return best_feats,best_k,best_par10
+  return best_feats,best_k,best_par10,computation
 
 def learn_optima_k(src_path,sub_scenario_path,kRange,testFeatures,log_file_hard,context):
   low_par10 = 999999
