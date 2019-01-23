@@ -19,30 +19,11 @@ from rand import *
 
 
 
-def learnK_with_all_feats(param_learn,param_learn_fold,context):
-  scenario_path,scenario_cv,scenario_outcome_dir,tdir,src_path,kRange,lim_nfeat,shouldWrappeFeature= parse_param_learn(param_learn)
-  
-  sub_scenario_path,log_file_hard,log_file_small,outcome_file,features = parse_param_learn_fold(param_learn_fold)
-  
-  start_time_fold = time.time()
-
-  par10,value_k,par10s = learn_optima_k(src_path,sub_scenario_path,kRange,'',log_file_hard,context)
-
-  date_now = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-
-  ex_time_fold = time.strftime("%H:%M:%S", time.gmtime(time.time()-start_time_fold)) 
-  
-  appendToFile(outcome_file,'train_1_; k='+str(value_k)+'; feats=all; par10='+str(par10)+'; runtime='+ex_time_fold+'; '+str(date_now)+"\n\n")
-  log_small(log_file_small,start_time_fold,'all',value_k,par10)
-
-  return value_k,par10
 
 
 
 def learn_scenario(param_learn):
   scenario_path,scenario_cv,scenario_outcome_dir,tdir,src_path,kRange,lim_nfeat,shouldWrappeFeature = parse_param_learn(param_learn)
-  #kRange==3...29 alla prima esecuzione
-  #lim_nfeat==5
   #shouldWrappeFeature==True
 
   start_time_fold = time.time()
@@ -73,41 +54,10 @@ def learn_scenario(param_learn):
   best_feats,best_k,par10f,computation = learn_scenario_fold(param_learn,param_learn_fold,context,3)
   #best_feats,best_k,par10f = learn_scenario_fold(percorso e cartelle,log e features,context,3)
 
-  print 'Step 1: ',par10f, best_k, best_feats, computation#sono i risultati dell'ultima feature
-
-  time_diff = time.strftime("%H:%M:%S", time.gmtime(time.time()-start_time_fold)) 
-
-  date_now = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-  appendToFile(outcome_file,'train_1_; k='+str(best_k)+'; feats='+best_feats+'; par10='+str(par10f)+'; runtime='+time_diff+'; '+str(date_now)+"\n\n")
-
-  # BACKUP APPROACH
- #for feat in features:
-  print 'Learning K with all the features'
-
-  # if not "feats=all;" in open(log_file_small).read():
-  param_learn['kRange'] = range(3,81)
-  value_k,par10k = learnK_with_all_feats(param_learn,param_learn_fold,context)
-  # else:
-  #   token = "feats=all;"
-  #   par10k,value_k = read_state_file(log_file_small,token)
-
-  print 'Step 2: ',par10k, value_k
-
-  # compare par10 of different approaches
-  final_k = value_k if par10k < par10f else best_k
-  final_feat = 'all' if par10k < par10f else best_feats
-  final_par10 = par10k if par10k < par10f else par10f
-
-  # final_k = best_k
-  # final_feat = best_feats
-  # final_par10 = par10f
-  time_diff = time.strftime("%H:%M:%S", time.gmtime(time.time()-start_time_fold)) 
-
-  date_now = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+  print 'Final result:',par10f, best_k, best_feats, computation
   
-  appendToFile(outcome_file,'train_1_b'+'; k='+str(final_k)+'; feats='+final_feat+'; par10='+str(final_par10)+'; runtime='+time_diff+'; '+str(date_now)+"\n\n")
+  appendToFile(outcome_file,'train_1_b'+'; k='+str(best_k)+'; feats='+best_feats+'; par10='+str(par10f)+"\n\n")
 
-  print 'FINAL RESULT:',final_par10,final_feat,final_k,time_diff
 
 #=======================================================
 #=======================================================
@@ -139,7 +89,7 @@ def main(args):
   'scenario_outcome_dir':scenario_path+"/"+outcomeDirname,
   'tdir':tdir,
   'src_path':src_path,
-  'kRange':kRange, #sempre da 3 a 30
+  'kRange':kRange,
   'lim_nfeat':lim_nfeat,
   'shouldWrappeFeature':True
   }
