@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d9da7298-cf77-4654-8a71-c7f50094ab5d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../exec.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../../exec.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rand.py" beforeDir="false" afterPath="$PROJECT_DIR$/rand.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run_fkvarRand.py" beforeDir="false" afterPath="$PROJECT_DIR$/run_fkvarRand.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../results/fkvar/Caren.json" beforeDir="false" afterPath="$PROJECT_DIR$/../results/fkvar/Caren.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bit.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rand.py" beforeDir="false" afterPath="$PROJECT_DIR$/randk.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run_fkvarRand.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run_fkvarbit.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,26 +17,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/run_fkvarRand.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/randk.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="32" column="30" lean-forward="true" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
+            <state relative-caret-position="425">
+              <caret line="48" column="21" selection-start-line="48" selection-start-column="21" selection-end-line="48" selection-end-column="21" />
               <folding>
-                <element signature="e#142#151#0" expanded="true" />
+                <element signature="e#122#131#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/rand.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/result.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1725">
-              <caret line="125" column="14" lean-forward="true" selection-start-line="125" selection-start-column="14" selection-end-line="125" selection-end-column="14" />
-              <folding>
-                <element signature="e#4987#5003#0" />
-              </folding>
+            <state relative-caret-position="872">
+              <caret line="76" column="70" selection-start-line="76" selection-start-column="62" selection-end-line="76" selection-end-column="70" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/run_randk.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="615">
+              <caret line="63" column="22" selection-start-line="63" selection-start-column="22" selection-end-line="63" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -43,23 +51,8 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>parse_para</find>
-      <find>so</find>
-      <find>/t</find>
-      <find>learn_opt</find>
-      <find>run_eva</find>
-      <find>sub_scenario_path</find>
-      <find>context</find>
-      <find>gain</find>
-      <find>learn_scenario_fold</find>
-      <find>learn_op</find>
-      <find>learn_optima_k</find>
-      <find>steP</find>
-      <find>value_k</find>
-      <find>fist_n_ks</find>
       <find>learn_scenario_fo</find>
       <find>param_learn</find>
-      <find>kRange</find>
       <find>t</find>
       <find>test</find>
       <find>\n</find>
@@ -69,10 +62,25 @@
       <find>outcome_file</find>
       <find>sort</find>
       <find>choice</find>
-      <find>outcome</find>
       <find>ra</find>
       <find>krange</find>
       <find>learnK_with_all_feats</find>
+      <find>result</find>
+      <find>Results</find>
+      <find>kRange</find>
+      <find>Popen</find>
+      <find>validat</find>
+      <find>validate_trained_scenario</find>
+      <find>run_sunny_oasc</find>
+      <find>trained</find>
+      <find>getTrainingOutcome</find>
+      <find>parse_description</find>
+      <find>outcome</find>
+      <find>range</find>
+      <find>init_files</find>
+      <find>\n\n</find>
+      <find>initFiles</find>
+      <find>testin</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -81,26 +89,39 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/run_fkvar.py" />
         <option value="$PROJECT_DIR$/run_fkvarbit.py" />
         <option value="$PROJECT_DIR$/bit.py" />
         <option value="$PROJECT_DIR$/rand.py" />
         <option value="$PROJECT_DIR$/run_fkvarRand.py" />
+        <option value="$PROJECT_DIR$/run_fkvar.py" />
+        <option value="$PROJECT_DIR$/run_randk.py" />
+        <option value="$PROJECT_DIR$/randk.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-1" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="529" />
     <option name="y" value="27" />
-    <option name="width" value="1131" />
+    <option name="width" value="1121" />
     <option name="height" value="948" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
-    <navigator proportions="" version="1">
+    <navigator currentView="Scope" currentSubView="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope" proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="oasc" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -112,7 +133,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -181,10 +201,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="25" width="1853" height="1055" extended-state="7" />
+    <frame x="529" y="27" width="1121" height="948" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20983607" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.34972677" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -194,7 +214,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32967034" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32967034" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32937366" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32967034" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" />
@@ -221,13 +241,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/kit.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/run_autok.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
@@ -242,16 +255,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/run_fkvar.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="68" column="46" selection-start-line="68" selection-start-column="46" selection-end-line="68" selection-end-column="46" />
-          <folding>
-            <element signature="e#142#151#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../kit/stats.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -262,22 +265,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/run_fkvarRand.py">
+    <entry file="file://$PROJECT_DIR$/run_fkvarRand.py" />
+    <entry file="file://$PROJECT_DIR$/run_fkvar.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="30" lean-forward="true" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
+        <state relative-caret-position="386">
+          <caret line="116" column="33" selection-start-line="116" selection-start-column="33" selection-end-line="116" selection-end-column="33" />
           <folding>
             <element signature="e#142#151#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rand.py">
+    <entry file="file://$PROJECT_DIR$/kit.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1725">
-          <caret line="125" column="14" lean-forward="true" selection-start-line="125" selection-start-column="14" selection-end-line="125" selection-end-column="14" />
+        <state relative-caret-position="735">
+          <caret line="56" selection-start-line="56" selection-end-line="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/clean.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/run_randk.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="63" column="22" selection-start-line="63" selection-start-column="22" selection-end-line="63" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/result.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="872">
+          <caret line="76" column="70" selection-start-line="76" selection-start-column="62" selection-end-line="76" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/randk.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="48" column="21" selection-start-line="48" selection-start-column="21" selection-end-line="48" selection-end-column="21" />
           <folding>
-            <element signature="e#4987#5003#0" />
+            <element signature="e#122#131#0" expanded="true" />
           </folding>
         </state>
       </provider>

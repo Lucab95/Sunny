@@ -15,7 +15,7 @@ import os
 import sys
 import datetime
 import time
-from rand import *
+from randk import *
 
 
 
@@ -72,7 +72,7 @@ def main(args):
   # configuration settings
   lim_nfeat = 5
   tdir = 't'
-  outcomeDirname = 'outcome-fkvar'
+  outcomeDirname = 'outcome-randk'
 
   low_k = 3
   high_k = 30
