@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d9da7298-cf77-4654-8a71-c7f50094ab5d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/oasc.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/oasc.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/randk.py" beforeDir="false" afterPath="$PROJECT_DIR$/randk.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run_randk.py" beforeDir="false" afterPath="$PROJECT_DIR$/run_randk.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../results/randk/Caren.json" beforeDir="false" afterPath="$PROJECT_DIR$/../results/randk/Caren.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simann.py" beforeDir="false" afterPath="$PROJECT_DIR$/simann.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../simanneal/examples/salesman.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../simanneal/examples/salesman.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../simanneal/examples/watershed/watershed_condition.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../simanneal/examples/watershed/watershed_condition.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../simanneal/simanneal/anneal.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../simanneal/simanneal/anneal.py" afterDir="false" />
@@ -36,8 +30,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/simann.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="535">
-              <caret line="94" column="20" selection-start-line="94" selection-start-column="14" selection-end-line="94" selection-end-column="20" />
+            <state relative-caret-position="415">
+              <caret line="92" column="18" selection-start-line="92" selection-start-column="18" selection-end-line="92" selection-end-column="18" />
               <folding>
                 <element signature="e#122#131#0" expanded="true" />
                 <element signature="e#4803#5627#0" />
@@ -49,8 +43,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/simanneal/anneal.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="184" column="50" selection-start-line="184" selection-start-column="50" selection-end-line="184" selection-end-column="50" />
+            <state relative-caret-position="165">
+              <caret line="109" column="27" lean-forward="true" selection-start-line="109" selection-start-column="27" selection-end-line="109" selection-end-column="27" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
               </folding>
@@ -73,7 +67,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../../simanneal/examples/salesman.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="535">
+            <state relative-caret-position="1075">
               <caret line="82" column="23" selection-start-line="82" selection-start-column="23" selection-end-line="82" selection-end-column="23" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
@@ -112,10 +106,10 @@
       <find>train ese</find>
       <find>train es</find>
       <find>small_sunny</find>
-      <find>Temperature</find>
       <find>testing</find>
-      <find>accept</find>
+      <find>Temperature</find>
       <find>params</find>
+      <find>accept</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -406,6 +400,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/run_simann.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="51" column="26" selection-start-line="51" selection-start-column="26" selection-end-line="51" selection-end-column="26" />
+          <folding>
+            <element signature="e#142#151#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../../../simanneal/simanneal/anneal.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1153">
@@ -418,7 +422,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../../../simanneal/examples/salesman.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="535">
+        <state relative-caret-position="1075">
           <caret line="82" column="23" selection-start-line="82" selection-start-column="23" selection-end-line="82" selection-end-column="23" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
@@ -426,20 +430,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/run_simann.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="51" column="26" selection-start-line="51" selection-start-column="26" selection-end-line="51" selection-end-column="26" />
-          <folding>
-            <element signature="e#142#151#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/simanneal/anneal.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="184" column="50" selection-start-line="184" selection-start-column="50" selection-end-line="184" selection-end-column="50" />
+        <state relative-caret-position="165">
+          <caret line="109" column="27" lean-forward="true" selection-start-line="109" selection-start-column="27" selection-end-line="109" selection-end-column="27" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
           </folding>
@@ -448,8 +442,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/simann.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="535">
-          <caret line="94" column="20" selection-start-line="94" selection-start-column="14" selection-end-line="94" selection-end-column="20" />
+        <state relative-caret-position="415">
+          <caret line="92" column="18" selection-start-line="92" selection-start-column="18" selection-end-line="92" selection-end-column="18" />
           <folding>
             <element signature="e#122#131#0" expanded="true" />
             <element signature="e#4803#5627#0" />

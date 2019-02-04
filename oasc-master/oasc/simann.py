@@ -47,8 +47,8 @@ def learn_scenario_fold(param_learn,param_learn_fold,context,fist_n_ks):
     Provando ad implementare la classe per utilizzare SimAnn
     """
 
-    def __init__(self , state , value_k ):
-      self.value_k = value_k
+    def __init__(self , state ):
+      self.state = state
       super(SunnyAnnealer , self).__init__(state)  # important!
 
     def move(self):
@@ -58,29 +58,28 @@ def learn_scenario_fold(param_learn,param_learn_fold,context,fist_n_ks):
         """new_range = self.kRange
         new_range.remove(self.value_k)
         print("new range",new_range)"""
-        self.value_k = random.choice(kRange)
+        self.state['k'] = random.choice(kRange)
         # print("self.valuek",self.value_k)
       else:
         pos = random.choice(range(0,5))
-        z = self.state.split(',')
+        z = self.state['feat'].split(',')
         featexcept = list(features)
         newfeat = random.choice(featexcept)
         z[pos] = newfeat
-        self.state = ','.join(z)
+        self.state['feat'] = ','.join(z)
 
 
 
     def energy(self):
       """Calculates the length of the route."""
-      params = {'k': self.value_k , 'feat': self.state}
-      e = run_evaluator(src_path,sub_scenario_path,params,context)
+      e = run_evaluator(src_path,sub_scenario_path,self.state,context)
       return e
 
 
   best_k = best_par10 = float('inf')
   best_feats = ''
   nfeat = 5
-  random.seed(2)
+  random.seed(3)
   #krange from 3 to 29
   """initial random state"""
   randoFeats = ','.join(random.sample(features,nfeat))
@@ -89,23 +88,23 @@ def learn_scenario_fold(param_learn,param_learn_fold,context,fist_n_ks):
   #start_time_feat = time.time()
   # MAIN
   value_k = random.choice(kRange)
-  sSA = SunnyAnnealer(randoFeats,value_k)
-  sSA.steps = 100
-  sSA.copy_strategy = "slice"
-  best_feats, best_k = sSA.anneal()
   params = {'k': value_k , 'feat': randoFeats}
+  sSA = SunnyAnnealer(params)
+  sSA.steps = 1000
+  sSA.copy_strategy = "method"
+  params, par10 = sSA.anneal()
   best_par10 = run_evaluator(src_path,sub_scenario_path,params,context)
 
   #print ("num feature, feature", nfeat, randoFeats)
-  print("value_k, par10" ,best_feats, best_k, best_par10)
+  print("value_k, par10" ,params['feat'], params['k'], par10,best_par10)
 
 
   # save state
 
   # debug log
-  log_small_subtotal(log_file_small,best_feats,best_k,best_par10)
+  log_small_subtotal(log_file_small,best_feats,params['k'],best_par10)
   #end for
-  return best_feats,best_k,best_par10
+  return params['feat'],params['k'],best_par10
 
 # run with feedback
 def run_evaluator(src_path,scenario_path,params,context):
