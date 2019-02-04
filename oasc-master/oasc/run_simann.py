@@ -15,15 +15,13 @@ import os
 import sys
 import datetime
 import time
-from randk import *
-
-
+from simann import *
 
 
 
 
 def learn_scenario(param_learn):
-  scenario_path,scenario_cv,scenario_outcome_dir,tdir,src_path,kRange,shouldWrappeFeature = parse_param_learn(param_learn)
+  scenario_path,scenario_cv,scenario_outcome_dir,tdir,src_path,kRange,lim_nfeat,shouldWrappeFeature = parse_param_learn(param_learn)
   #shouldWrappeFeature==True
 
   start_time_fold = time.time()
@@ -34,6 +32,7 @@ def learn_scenario(param_learn):
 
   context = build_context(sub_scenario_path)
 
+  # create resumable state
   #crea i file log_hard e log small
   log_file_hard,log_file_small,outcome_file = initFiles(scenario_outcome_dir,kRange[0],kRange[-1])
 
@@ -50,10 +49,10 @@ def learn_scenario(param_learn):
     'features':features
   }
 
-  best_feats,best_k,par10f,computation = learn_scenario_fold(param_learn,param_learn_fold,context,3)
+  best_feats,best_k,par10f = learn_scenario_fold(param_learn,param_learn_fold,context,3)
   #best_feats,best_k,par10f = learn_scenario_fold(percorso e cartelle,log e features,context,3)
 
-  print 'Final result:',par10f, best_k, best_feats, computation
+  #print 'Final result:',par10f, best_k, best_feats
   
   appendToFile(outcome_file,'train_1_b'+'; k='+str(best_k)+'; feats='+best_feats+'; par10='+str(par10f)+"\n\n")
 
@@ -69,8 +68,9 @@ def main(args):
   scenario_name = args[0]
 
   # configuration settings
+  lim_nfeat = 5
   tdir = 't'
-  outcomeDirname = 'outcome-randk'
+  outcomeDirname = 'outcome-simann'
 
   low_k = 3
   high_k = 30
@@ -88,6 +88,7 @@ def main(args):
   'tdir':tdir,
   'src_path':src_path,
   'kRange':kRange,
+  'lim_nfeat':lim_nfeat,
   'shouldWrappeFeature':True
   }
   learn_scenario(param_learn)

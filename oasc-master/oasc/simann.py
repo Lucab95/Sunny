@@ -20,7 +20,6 @@ import datetime
 import time
 import random
 
-
 from shutil import copyfile
 # import sys
 root_arr = os.path.realpath(__file__).split('/')[:-2]
@@ -32,56 +31,81 @@ from train_scenario_oasc import parse_description
 from sunny_mock import pre_process_mock,test_scenario_mock,train_scenario_mock,getFeatureCost
 from subprocess import Popen
 from math import sqrt
-
 from analyze_scenario import analyze_scenario_stats,getRunTime
+from simanneal import Annealer
+
+
 
 
 
 def learn_scenario_fold(param_learn,param_learn_fold,context,fist_n_ks):
-  scenario_path,scenario_cv,scenario_outcome_dir,tdir,src_path,kRange,shouldWrappeFeature= parse_param_learn(param_learn)
+  scenario_path,scenario_cv,scenario_outcome_dir,tdir,src_path,kRange,lim_nfeat,shouldWrappeFeature= parse_param_learn(param_learn)
   sub_scenario_path,log_file_hard,log_file_small,outcome_file,features = parse_param_learn_fold(param_learn_fold)
 
-  # iteration for best configurators
-  computation=0
+  class SunnyAnnealer(Annealer):
+    """
+    Provando ad implementare la classe per utilizzare SimAnn
+    """
+
+    def __init__(self , state , value_k ):
+      self.value_k = value_k
+      super(SunnyAnnealer , self).__init__(state)  # important!
+
+    def move(self):
+      """modify the feats """
+      change = random.choice(range(1 , 10))
+      if change > 7:
+        """new_range = self.kRange
+        new_range.remove(self.value_k)
+        print("new range",new_range)"""
+        self.value_k = random.choice(kRange)
+        # print("self.valuek",self.value_k)
+      else:
+        pos = random.choice(range(0,5))
+        z = self.state.split(',')
+        featexcept = list(features)
+        newfeat = random.choice(featexcept)
+        z[pos] = newfeat
+        self.state = ','.join(z)
+
+
+
+    def energy(self):
+      """Calculates the length of the route."""
+      params = {'k': self.value_k , 'feat': self.state}
+      e = run_evaluator(src_path,sub_scenario_path,params,context)
+      return e
+
+
   best_k = best_par10 = float('inf')
   best_feats = ''
-  random.seed(4)
-  for i in range(1000):
-    elements = random.randint(3,15)
-    randoFeats = ','.join(random.sample(features,elements))
-    # check saved states (if computed yet) could be removed
-    if "feats="+randoFeats+";" in open(log_file_small).read():
-      print "feats=",randoFeats,"; already computed"
-      token = "feats="+randoFeats+";"
-      par10,value_k = read_state_file(log_file_small,token)
-    else:
+  nfeat = 5
+  random.seed(2)
+  #krange from 3 to 29
+  """initial random state"""
+  randoFeats = ','.join(random.sample(features,nfeat))
 
-      # start main
-      start_time_feat = time.time()
+  # start main
+  #start_time_feat = time.time()
+  # MAIN
+  value_k = random.choice(kRange)
+  sSA = SunnyAnnealer(randoFeats,value_k)
+  sSA.steps = 100
+  sSA.copy_strategy = "slice"
+  best_feats, best_k = sSA.anneal()
+  params = {'k': value_k , 'feat': randoFeats}
+  best_par10 = run_evaluator(src_path,sub_scenario_path,params,context)
 
-      # MAIN
-      value_k = random.choice(kRange)
-      params = {'k': value_k , 'feat': randoFeats}
-      par10 = run_evaluator(src_path,sub_scenario_path,params,context)
-
-      print ("num feature, feature", elements, randoFeats)
-      print("computation, value_k, par10" ,i, value_k, par10)
+  #print ("num feature, feature", nfeat, randoFeats)
+  print("value_k, par10" ,best_feats, best_k, best_par10)
 
 
-      # save state
-      log_small(log_file_small,start_time_feat,randoFeats,value_k,par10)
+  # save state
 
-    # pos process
-    if par10 < best_par10:
-      best_par10 = par10
-      best_k = value_k
-      best_feats = randoFeats
-      computation=i
-
-    # debug log
-    log_small_subtotal(log_file_small,best_feats,best_k,best_par10)
+  # debug log
+  log_small_subtotal(log_file_small,best_feats,best_k,best_par10)
   #end for
-  return best_feats,best_k,best_par10,computation #the computation part will be used only for me
+  return best_feats,best_k,best_par10
 
 # run with feedback
 def run_evaluator(src_path,scenario_path,params,context):
@@ -97,7 +121,7 @@ def run_evaluator(src_path,scenario_path,params,context):
   testK = params['k']
   testFeat = params['feat']
   
-  # print 'testing: k',testK,' feat',testFeat, 'score',
+  #print 'testing: k',testK,' feat',testFeat, 'score',
 
   par10 = 0
   cv_folders = context['cv_folders']
@@ -661,8 +685,9 @@ def parse_param_learn(param_learn):
   tdir = param_learn['tdir']
   src_path = param_learn['src_path']
   kRange = param_learn['kRange']
+  lim_nfeat = param_learn['lim_nfeat']
   shouldWrappeFeature = param_learn['shouldWrappeFeature']
-  return scenario_path,scenario_cv,scenario_outcome_dir,tdir,src_path,kRange,shouldWrappeFeature
+  return scenario_path,scenario_cv,scenario_outcome_dir,tdir,src_path,kRange,lim_nfeat,shouldWrappeFeature
 
 def parse_param_learn_fold(param_learn_fold):
   sub_scenario_path = param_learn_fold['sub_scenario_path']
