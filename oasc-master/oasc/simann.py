@@ -79,6 +79,7 @@ def learn_scenario_fold(param_learn,param_learn_fold,context,fist_n_ks):
   best_k = best_par10 = float('inf')
   best_feats = ''
   nfeat = 5
+  random.seed(2)
   #krange from 3 to 29
   """initial random state"""
   randoFeats = ','.join(random.sample(features,nfeat))
