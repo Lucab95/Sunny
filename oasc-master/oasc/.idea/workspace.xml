@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d9da7298-cf77-4654-8a71-c7f50094ab5d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/simann.py" beforeDir="false" afterPath="$PROJECT_DIR$/simann.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../results/simann/Caren.json" beforeDir="false" afterPath="$PROJECT_DIR$/../results/simann/Caren.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../simanneal/examples/salesman.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../simanneal/examples/salesman.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../simanneal/examples/watershed/watershed_condition.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../simanneal/examples/watershed/watershed_condition.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../simanneal/simanneal/anneal.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../simanneal/simanneal/anneal.py" afterDir="false" />
@@ -31,8 +30,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/simann.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="86" column="14" lean-forward="true" selection-start-line="86" selection-start-column="14" selection-end-line="86" selection-end-column="14" />
+            <state relative-caret-position="435">
+              <caret line="89" column="33" lean-forward="true" selection-start-line="89" selection-start-column="33" selection-end-line="89" selection-end-column="33" />
               <folding>
                 <element signature="e#122#131#0" expanded="true" />
               </folding>
@@ -135,10 +134,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="145" />
-    <option name="y" value="27" />
-    <option name="width" value="1242" />
-    <option name="height" value="948" />
+    <option name="x" value="1920" />
+    <option name="y" value="-2" />
+    <option name="width" value="1920" />
+    <option name="height" value="998" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -255,7 +254,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="25" width="1920" height="1055" extended-state="6" />
+    <frame x="1920" y="-2" width="1920" height="998" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20980495" />
@@ -442,8 +441,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/simann.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="86" column="14" lean-forward="true" selection-start-line="86" selection-start-column="14" selection-end-line="86" selection-end-column="14" />
+        <state relative-caret-position="435">
+          <caret line="89" column="33" lean-forward="true" selection-start-line="89" selection-start-column="33" selection-end-line="89" selection-end-column="33" />
           <folding>
             <element signature="e#122#131#0" expanded="true" />
           </folding>
