@@ -90,7 +90,7 @@ def learn_scenario_fold(param_learn,param_learn_fold,context,fist_n_ks):
   value_k = random.choice(kRange)
   params = {'k': value_k , 'feat': randoFeats}
   sSA = SunnyAnnealer(params)
-  sSA.steps = 5000
+  sSA.steps = 1000
   sSA.copy_strategy = "method"
   params, par10 = sSA.anneal()
   best_par10 = run_evaluator(src_path,sub_scenario_path,params,context)

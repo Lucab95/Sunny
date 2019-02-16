@@ -41,9 +41,9 @@ class Annealer(object):
     steps = 50000
     updates = 100
     copy_strategy = 'deepcopy'
+    timeout = 10800 # 3h 0 min
     user_exit = False
     save_state_on_exit = False
-
     # placeholders
     best_state = None
     best_energy = None
@@ -94,6 +94,7 @@ class Annealer(object):
         self.Tmax = schedule['tmax']
         self.Tmin = schedule['tmin']
         self.steps = int(schedule['steps'])
+
         self.updates = int(schedule['updates'])
 
     def copy_state(self, state):
@@ -153,7 +154,13 @@ class Annealer(object):
                   (T, E, time_string(elapsed)), file=sys.stderr, end="\r")
             sys.stderr.flush()
         else:
+            #print("remain" ,self.steps,step,elapsed, time.time(), self.start)
+            if self.timeout < elapsed:
+                self.timeout= -1
             remain = (self.steps - step) * (elapsed / step)
+            #print("epoch time elapsed" , time.strftime('%H:%M:%S' , time.localtime(elapsed)))
+            #print("epoch time",time.strftime('%H:%M:%S', time.localtime(remain)))
+
             print('\r%12.5f  %12.2f  %7.2f%%  %7.2f%%  %s  %s\r' %
                   (T, E, 100.0 * acceptance, 100.0 * improvement,
                    time_string(elapsed), time_string(remain)), file=sys.stderr, end="\r")
@@ -190,7 +197,8 @@ class Annealer(object):
             self.update(step, T, E, None, None)
 
         # Attempt moves to new states
-        while step < self.steps and not self.user_exit:
+        #print("remaining time" , self.timeout)
+        while step < self.steps and not self.user_exit and self.timeout > 0:
             step += 1
             T = self.Tmax * math.exp(Tfactor * step / self.steps)
             self.move()
@@ -216,11 +224,11 @@ class Annealer(object):
                     self.update(
                         step, T, E, accepts / trials, improves / trials)
                     trials, accepts, improves = 0, 0, 0
+            #print("remaining time",self.timeout)
 
         self.state = self.copy_state(self.best_state)
         if self.save_state_on_exit:
             self.save_state()
-
         # Return best state and energy
         return self.best_state, self.best_energy
 
@@ -255,6 +263,7 @@ class Annealer(object):
 
         step = 0
         self.start = time.time()
+        self.timeout
 
         # Attempting automatic simulated anneal...
         # Find an initial guess for temperature

@@ -60,7 +60,7 @@ def learn_scenario_fold(param_learn,param_learn_fold,context,fist_n_ks):
       start_time_feat = time.time()
 
       # MAIN
-      value_k = random.choice(kRange)
+      value_k = random.randint(kRange)
       params = {'k': value_k , 'feat': randoFeats}
       par10 = run_evaluator(src_path,sub_scenario_path,params,context)
 
