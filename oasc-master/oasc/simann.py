@@ -55,15 +55,17 @@ def learn_scenario_fold(param_learn,param_learn_fold,context,fist_n_ks):
       """modify the feats """
       change = random.choice(range(1 , 10))
       if change > 7:
-        """new_range = self.kRange
-        new_range.remove(self.value_k)
-        print("new range",new_range)"""
-        self.state['k'] = random.choice(kRange)
+        new_range = list(kRange)
+        new_range.remove(self.state["k"])
+        #print("previous k",self.state["k"])
+        #print("krange",new_range)
+        self.state['k'] = random.choice(new_range)
+        #print("new k",self.state["k"])
         # print("self.valuek",self.value_k)
       else:
         pos = random.choice(range(0,5))
         z = self.state['feat'].split(',')
-        featexcept = list(features)
+        featexcept = list(set(features) - set(z))  # evitare duplicati
         newfeat = random.choice(featexcept)
         z[pos] = newfeat
         self.state['feat'] = ','.join(z)
@@ -79,7 +81,7 @@ def learn_scenario_fold(param_learn,param_learn_fold,context,fist_n_ks):
   best_k = best_par10 = float('inf')
   best_feats = ''
   nfeat = 5
-  random.seed(2)
+  #random.seed(3)
   #krange from 3 to 29
   """initial random state"""
   randoFeats = ','.join(random.sample(features,nfeat))
@@ -90,7 +92,7 @@ def learn_scenario_fold(param_learn,param_learn_fold,context,fist_n_ks):
   value_k = random.choice(kRange)
   params = {'k': value_k , 'feat': randoFeats}
   sSA = SunnyAnnealer(params)
-  sSA.steps = 1000
+  sSA.steps = 2000
   sSA.copy_strategy = "method"
   params, par10 = sSA.anneal()
   best_par10 = run_evaluator(src_path,sub_scenario_path,params,context)
