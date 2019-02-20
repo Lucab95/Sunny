@@ -53,15 +53,11 @@ def learn_scenario_fold(param_learn,param_learn_fold,context,fist_n_ks):
 
     def move(self):
       """modify the feats """
-      change = random.choice(range(1 , 10))
-      if change > 7:
+      change = random.randint(1 , 10)
+      if change > 10:
         new_range = list(kRange)
         new_range.remove(self.state["k"])
-        #print("previous k",self.state["k"])
-        #print("krange",new_range)
         self.state['k'] = random.choice(new_range)
-        #print("new k",self.state["k"])
-        # print("self.valuek",self.value_k)
       else:
         pos = random.choice(range(0,5))
         z = self.state['feat'].split(',')
@@ -73,7 +69,6 @@ def learn_scenario_fold(param_learn,param_learn_fold,context,fist_n_ks):
 
 
     def energy(self):
-      """Calculates the length of the route."""
       e = run_evaluator(src_path,sub_scenario_path,self.state,context)
       return e
 
@@ -92,7 +87,9 @@ def learn_scenario_fold(param_learn,param_learn_fold,context,fist_n_ks):
   value_k = random.choice(kRange)
   params = {'k': value_k , 'feat': randoFeats}
   sSA = SunnyAnnealer(params)
-  sSA.steps = 2000
+  auto_schedule=sSA.auto(minutes=1)
+  #sSA.steps = 2000
+  sSA.set_schedule(auto_schedule)
   sSA.copy_strategy = "method"
   params, par10 = sSA.anneal()
   best_par10 = run_evaluator(src_path,sub_scenario_path,params,context)
