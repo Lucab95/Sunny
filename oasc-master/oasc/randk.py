@@ -45,7 +45,7 @@ def learn_scenario_fold(param_learn,param_learn_fold,context,fist_n_ks):
   computation=0
   best_k = best_par10 = float('inf')
   best_feats = ''
-  for i in range(10000):
+  for i in range(2000):
     elements = random.randint(3,15)
     randoFeats = ','.join(random.sample(features,elements))
     # check saved states (if computed yet) could be removed
@@ -696,6 +696,8 @@ def initFiles(scenario_outcome_dir,low_k,high_k):
   '''
   if not os.path.exists(scenario_outcome_dir):
     os.makedirs(scenario_outcome_dir)
+
+
 
   log_file_hard = scenario_outcome_dir+'/log-hard'+'-k-'+str(low_k)+'-'+str(high_k)+'.txt'
   log_file_small = scenario_outcome_dir+'/log-small'+'-k-'+str(low_k)+'-'+str(high_k)+'.txt'

@@ -70,7 +70,10 @@ def main(args):
 
   # configuration settings
   tdir = 't'
-  outcomeDirname = 'outcome-randk'
+  if len(args)==1:
+    outcomeDirname = 'outcome-randk'
+  else:
+    outcomeDirname = 'outcome-randk'+args[1]
 
   low_k = 3
   high_k = 30

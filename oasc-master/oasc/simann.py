@@ -54,7 +54,7 @@ def learn_scenario_fold(param_learn,param_learn_fold,context,fist_n_ks):
     def move(self):
       """modify the feats """
       change = random.randint(1 , 10)
-      if change > 10:
+      if change > 7:
         new_range = list(kRange)
         new_range.remove(self.state["k"])
         self.state['k'] = random.choice(new_range)
@@ -87,9 +87,12 @@ def learn_scenario_fold(param_learn,param_learn_fold,context,fist_n_ks):
   value_k = random.choice(kRange)
   params = {'k': value_k , 'feat': randoFeats}
   sSA = SunnyAnnealer(params)
-  auto_schedule=sSA.auto(minutes=1)
-  #sSA.steps = 2000
-  sSA.set_schedule(auto_schedule)
+  #auto_schedule=sSA.auto(minutes=0.5)
+  sSA.steps = 2800
+  sSA.Tmax = 50000.00
+  sSA.Tmin = 10.00
+  #print("tmin,tmax.temp)",auto_schedule)
+  #sSA.set_schedule(auto_schedule)
   sSA.copy_strategy = "method"
   params, par10 = sSA.anneal()
   best_par10 = run_evaluator(src_path,sub_scenario_path,params,context)
