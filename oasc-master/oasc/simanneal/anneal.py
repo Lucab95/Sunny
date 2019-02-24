@@ -42,7 +42,7 @@ class Annealer(object):
     updates = 100
     computation=0
     copy_strategy = 'deepcopy'
-    timeout = 10800 # 3h 0min
+    timeout = 14400 # 4h 0min
     user_exit = False
     save_state_on_exit = False
     # placeholders
