@@ -40,6 +40,7 @@ class Annealer(object):
     Tmin = 2.5
     steps = 50000
     updates = 100
+    computation=0
     copy_strategy = 'deepcopy'
     timeout = 10800 # 3h 0min
     user_exit = False
@@ -231,7 +232,8 @@ class Annealer(object):
         if self.save_state_on_exit:
             self.save_state()
         # Return best state and energy
-        print("Tempo \n",time.time() - self.start)
+        print("\n time in sec ",time.time() - self.start)
+        print(" steps computed",self.computation)
         return self.best_state, self.best_energy
 
     def auto(self, minutes, steps=2000):

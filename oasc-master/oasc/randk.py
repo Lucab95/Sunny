@@ -32,7 +32,6 @@ from train_scenario_oasc import parse_description
 from sunny_mock import pre_process_mock,test_scenario_mock,train_scenario_mock,getFeatureCost
 from subprocess import Popen
 from math import sqrt
-
 from analyze_scenario import analyze_scenario_stats,getRunTime
 
 

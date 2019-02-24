@@ -4,13 +4,14 @@
     <list default="true" id="d9da7298-cf77-4654-8a71-c7f50094ab5d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../../exec.sh" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../execsimann.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../general.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../../general.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/randk.py" beforeDir="false" afterPath="$PROJECT_DIR$/randk.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run_randk.py" beforeDir="false" afterPath="$PROJECT_DIR$/run_randk.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/simann.py" beforeDir="false" afterPath="$PROJECT_DIR$/simann.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/simanneal/anneal.py" beforeDir="false" afterPath="$PROJECT_DIR$/simanneal/anneal.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../results/randk/Caren.json" beforeDir="false" afterPath="$PROJECT_DIR$/../results/randk/Caren.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../results/simann/Caren.json" beforeDir="false" afterPath="$PROJECT_DIR$/../results/simann/Caren.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../results/simann/Mira.json" beforeDir="false" afterPath="$PROJECT_DIR$/../results/simann/Mira.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../results/simann/Quill.json" beforeDir="false" afterPath="$PROJECT_DIR$/../results/simann/Quill.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../results/simann/Sora.json" beforeDir="false" afterPath="$PROJECT_DIR$/../results/simann/Sora.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../results/simann/Svea.json" beforeDir="false" afterPath="$PROJECT_DIR$/../results/simann/Svea.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../simanneal/examples/salesman.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../simanneal/examples/salesman.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../simanneal/examples/watershed/watershed_condition.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../simanneal/examples/watershed/watershed_condition.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../simanneal/simanneal/anneal.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../simanneal/simanneal/anneal.py" afterDir="false" />
@@ -23,11 +24,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/simann.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1185">
-              <caret line="87" column="46" selection-start-line="87" selection-start-column="46" selection-end-line="87" selection-end-column="46" />
+            <state relative-caret-position="189">
+              <caret line="91" column="18" selection-start-line="91" selection-start-column="18" selection-end-line="91" selection-end-column="18" />
               <folding>
                 <element signature="e#122#131#0" expanded="true" />
               </folding>
@@ -38,8 +39,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/simanneal/anneal.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4050">
-              <caret line="282" column="21" selection-start-line="282" selection-start-column="21" selection-end-line="282" selection-end-column="21" />
+            <state relative-caret-position="730">
+              <caret line="249" column="51" selection-start-line="249" selection-start-column="51" selection-end-line="249" selection-end-column="51" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
               </folding>
@@ -48,19 +49,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/result.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="33" column="25" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/randk.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+            <state relative-caret-position="253">
+              <caret line="40" column="70" selection-start-line="40" selection-start-column="70" selection-end-line="40" selection-end-column="70" />
               <folding>
                 <element signature="e#122#131#0" expanded="true" />
               </folding>
@@ -69,9 +61,21 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/run_randk.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="343">
+              <caret line="59" lean-forward="true" selection-start-line="59" selection-end-line="59" />
+              <folding>
+                <element signature="e#142#151#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/run_simann.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1020">
+            <state relative-caret-position="1080">
               <caret line="72" column="34" selection-start-line="72" selection-start-column="28" selection-end-line="72" selection-end-column="34" />
               <folding>
                 <element signature="e#142#151#0" expanded="true" />
@@ -84,22 +88,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>train ese</find>
-      <find>train es</find>
-      <find>small_sunny</find>
-      <find>testing</find>
-      <find>Temperature</find>
-      <find>params</find>
-      <find>accept</find>
-      <find>duration</find>
-      <find>step</find>
-      <find>remain</find>
-      <find>self.start</find>
-      <find>self.timeout</find>
-      <find>remaining</find>
-      <find>timeout</find>
-      <find>change</find>
-      <find>minutes</find>
       <find>seed</find>
       <find>outcomeDirname</find>
       <find>outcome</find>
@@ -111,9 +99,25 @@
       <find>acce</find>
       <find>scenario_outc</find>
       <find>args</find>
-      <find>elapsed</find>
       <find>auto</find>
       <find>range</find>
+      <find>temperature</find>
+      <find>remaining</find>
+      <find>elapsed</find>
+      <find>te</find>
+      <find>simann</find>
+      <find>tra</find>
+      <find>computed</find>
+      <find>train es</find>
+      <find>e</find>
+      <find>computatio</find>
+      <find>train ese</find>
+      <find>computation</find>
+      <find>train</find>
+      <find>eseguito</find>
+      <find>train</find>
+      <find>esegui</find>
+      <find>eseg</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -131,18 +135,18 @@
         <option value="$PROJECT_DIR$/../../../simanneal/simanneal/anneal.py" />
         <option value="$PROJECT_DIR$/../../../simanneal/examples/salesman.py" />
         <option value="$PROJECT_DIR$/run_simann.py" />
-        <option value="$PROJECT_DIR$/simanneal/anneal.py" />
-        <option value="$PROJECT_DIR$/simann.py" />
         <option value="$PROJECT_DIR$/run_randk.py" />
         <option value="$PROJECT_DIR$/randk.py" />
+        <option value="$PROJECT_DIR$/simanneal/anneal.py" />
+        <option value="$PROJECT_DIR$/simann.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="67" />
-    <option name="y" value="25" />
-    <option name="width" value="1853" />
-    <option name="height" value="971" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="22" />
+    <option name="y" value="10" />
+    <option name="width" value="618" />
+    <option name="height" value="449" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -150,6 +154,17 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="oasc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="oasc" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="Scope">
         <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
           <expand>
@@ -186,17 +201,6 @@
               <item name="oasc" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="~/Scrivania/simanneal" type="442cc68d:ScopeViewTreeModel$RootNode" />
               <item name="tests" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="oasc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="oasc" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -270,7 +274,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="25" width="1853" height="971" extended-state="7" />
+    <frame x="67" y="25" width="1853" height="971" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20928961" />
@@ -411,47 +415,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/run_randk.py">
+    <entry file="file://$PROJECT_DIR$/run_simann.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="644">
-          <caret line="53" column="95" lean-forward="true" selection-start-line="53" selection-start-column="95" selection-end-line="53" selection-end-column="95" />
+        <state relative-caret-position="1080">
+          <caret line="72" column="34" selection-start-line="72" selection-start-column="28" selection-end-line="72" selection-end-column="34" />
           <folding>
             <element signature="e#142#151#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/simann.py">
+    <entry file="file://$PROJECT_DIR$/result.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1185">
-          <caret line="87" column="46" selection-start-line="87" selection-start-column="46" selection-end-line="87" selection-end-column="46" />
-          <folding>
-            <element signature="e#122#131#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="253">
+          <caret line="23" column="12" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/simanneal/anneal.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4050">
-          <caret line="282" column="21" selection-start-line="282" selection-start-column="21" selection-end-line="282" selection-end-column="21" />
+        <state relative-caret-position="730">
+          <caret line="249" column="51" selection-start-line="249" selection-start-column="51" selection-end-line="249" selection-end-column="51" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/result.py">
+    <entry file="file://$PROJECT_DIR$/run_randk.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="33" column="25" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/run_simann.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1020">
-          <caret line="72" column="34" selection-start-line="72" selection-start-column="28" selection-end-line="72" selection-end-column="34" />
+        <state relative-caret-position="343">
+          <caret line="59" lean-forward="true" selection-start-line="59" selection-end-line="59" />
           <folding>
             <element signature="e#142#151#0" expanded="true" />
           </folding>
@@ -460,8 +454,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/randk.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+        <state relative-caret-position="253">
+          <caret line="40" column="70" selection-start-line="40" selection-start-column="70" selection-end-line="40" selection-end-column="70" />
+          <folding>
+            <element signature="e#122#131#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/simann.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="91" column="18" selection-start-line="91" selection-start-column="18" selection-end-line="91" selection-end-column="18" />
           <folding>
             <element signature="e#122#131#0" expanded="true" />
           </folding>
