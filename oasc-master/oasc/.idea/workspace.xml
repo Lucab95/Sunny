@@ -4,14 +4,6 @@
     <list default="true" id="d9da7298-cf77-4654-8a71-c7f50094ab5d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../../exec.sh" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../execsimann.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../general.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../../general.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/randk.py" beforeDir="false" afterPath="$PROJECT_DIR$/randk.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simann.py" beforeDir="false" afterPath="$PROJECT_DIR$/simann.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simanneal/anneal.py" beforeDir="false" afterPath="$PROJECT_DIR$/simanneal/anneal.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../results/simann/Mira.json" beforeDir="false" afterPath="$PROJECT_DIR$/../results/simann/Mira.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../results/simann/Quill.json" beforeDir="false" afterPath="$PROJECT_DIR$/../results/simann/Quill.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../results/simann/Sora.json" beforeDir="false" afterPath="$PROJECT_DIR$/../results/simann/Sora.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../results/simann/Svea.json" beforeDir="false" afterPath="$PROJECT_DIR$/../results/simann/Svea.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../simanneal/examples/salesman.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../simanneal/examples/salesman.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../simanneal/examples/watershed/watershed_condition.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../simanneal/examples/watershed/watershed_condition.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../simanneal/simanneal/anneal.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../simanneal/simanneal/anneal.py" afterDir="false" />
