@@ -8,5 +8,3 @@ cd ../../kit
 python stats.py ../oasc-master/results/$1/$2.json
 cd ../
 #mplayer bell.mp3
-
-

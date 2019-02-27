@@ -89,9 +89,9 @@ def learn_scenario_fold(param_learn,param_learn_fold,context,fist_n_ks):
   params = {'k': value_k , 'feat': randoFeats}
   sSA = SunnyAnnealer(params)
   #auto_schedule=sSA.auto(minutes=0.5)
-  sSA.steps = 4000
-  #sSA.Tmax = 50000.00
-  #sSA.Tmin = 10.00
+  sSA.steps = 2800
+  sSA.Tmax = 50000.00
+  sSA.Tmin = 10.00
   #print("tmin,tmax.temp)",auto_schedule)
   #sSA.set_schedule(auto_schedule)
   sSA.copy_strategy = "method"

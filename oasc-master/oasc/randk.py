@@ -44,7 +44,7 @@ def learn_scenario_fold(param_learn,param_learn_fold,context,fist_n_ks):
   computation=0
   best_k = best_par10 = float('inf')
   best_feats = ''
-  for i in range(2000):
+  for i in range(200):
     elements = random.randint(3,15)
     randoFeats = ','.join(random.sample(features,elements))
     # check saved states (if computed yet) could be removed
